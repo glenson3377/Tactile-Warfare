@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvpmm8bv8h4gb"]
+
+[ext_resource type="ArrayMesh" uid="uid://brtapc2l3mwrj" path="res://materials/square prop.obj" id="1_qed8w"]
+[ext_resource type="ArrayMesh" uid="uid://bdcdeiwqu4ibk" path="res://materials/flag prop.obj" id="2_p0s13"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2uo1x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a28es"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlqqv"]
+albedo_color = Color(0.615686, 0.611765, 0.592157, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e88rt"]
+
+[node name="hq" type="Node3D"]
+
+[node name="hqmesh" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_2uo1x")
+
+[node name="hqbody" type="MeshInstance3D" parent="hqmesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0421097, 0, 0.0688605)
+mesh = ExtResource("1_qed8w")
+
+[node name="hqflag" type="MeshInstance3D" parent="hqmesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.966346, 0)
+mesh = ExtResource("2_p0s13")
+surface_material_override/0 = SubResource("StandardMaterial3D_a28es")
+surface_material_override/1 = SubResource("StandardMaterial3D_wlqqv")
+
+[node name="hqhitbox" type="CollisionShape3D" parent="hqmesh"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.049469, 0.0268555, 0.0539551)
+shape = SubResource("BoxShape3D_e88rt")

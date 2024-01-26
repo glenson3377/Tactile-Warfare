@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvk2bc71ee6dx"
+path="res://.godot/imported/grunt mold.obj-ac36a66241419eb5ee8fb788db9e222e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/grunt mold.obj-ac36a66241419eb5ee8fb788db9e222e.mesh"]
+
+source_file="res://materials/grunt mold.obj"
+dest_files=["res://.godot/imported/grunt mold.obj-ac36a66241419eb5ee8fb788db9e222e.mesh", "res://.godot/imported/grunt mold.obj-ac36a66241419eb5ee8fb788db9e222e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

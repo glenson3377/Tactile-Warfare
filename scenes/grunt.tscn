@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs167xc5i6uh0"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvk2bc71ee6dx" path="res://materials/grunt mold.obj" id="1_ksche"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uiv60"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23tum"]
+albedo_color = Color(0.521569, 0.521569, 0.521569, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqbin"]
+albedo_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cywpn"]
+
+[node name="grunt" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_uiv60")
+
+[node name="gruntmesh" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("1_ksche")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_23tum")
+surface_material_override/1 = SubResource("StandardMaterial3D_eqbin")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_cywpn")
